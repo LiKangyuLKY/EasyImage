@@ -1,0 +1,485 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ImageProcessUIClass</class>
+ <widget class="QMainWindow" name="ImageProcessUIClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>900</width>
+    <height>500</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>0</width>
+    <height>0</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Easy Image</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>ico/logo.ico</normaloff>ico/logo.ico</iconset>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout" stretch="1,20">
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="1,0,18,20">
+      <item>
+       <widget class="QLabel" name="label">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="font">
+         <font>
+          <family>Agency FB</family>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>调整卷积核大小</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QSpinBox" name="SpinBox">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="maximum">
+         <number>10</number>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QSlider" name="Slider">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="contextMenuPolicy">
+         <enum>Qt::DefaultContextMenu</enum>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="maximum">
+         <number>10</number>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="tickPosition">
+         <enum>QSlider::TicksBelow</enum>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>445</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout" stretch="0">
+      <item>
+       <layout class="QGridLayout" name="gridLayout" rowstretch="0,0" columnstretch="0,0">
+        <property name="sizeConstraint">
+         <enum>QLayout::SetFixedSize</enum>
+        </property>
+        <item row="0" column="1">
+         <widget class="QLabel" name="label2">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="font">
+           <font>
+            <family>Agency FB</family>
+            <pointsize>16</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="layoutDirection">
+           <enum>Qt::LeftToRight</enum>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">border:1px solid rgb(0, 0, 0);</string>
+          </property>
+          <property name="text">
+           <string>输出窗口1</string>
+          </property>
+          <property name="scaledContents">
+           <bool>false</bool>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0">
+         <widget class="QLabel" name="label1">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="font">
+           <font>
+            <family>Agency FB</family>
+            <pointsize>16</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="layoutDirection">
+           <enum>Qt::LeftToRight</enum>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">border:1px solid rgb(0, 0, 0);</string>
+          </property>
+          <property name="text">
+           <string>原始图像</string>
+          </property>
+          <property name="scaledContents">
+           <bool>false</bool>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="label3">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="font">
+           <font>
+            <family>Agency FB</family>
+            <pointsize>16</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="layoutDirection">
+           <enum>Qt::LeftToRight</enum>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">border:1px solid rgb(0, 0, 0);</string>
+          </property>
+          <property name="text">
+           <string>输出窗口2</string>
+          </property>
+          <property name="scaledContents">
+           <bool>false</bool>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QLabel" name="label4">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="font">
+           <font>
+            <family>Agency FB</family>
+            <pointsize>16</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="layoutDirection">
+           <enum>Qt::LeftToRight</enum>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">border:1px solid rgb(0, 0, 0);</string>
+          </property>
+          <property name="text">
+           <string>输出窗口3</string>
+          </property>
+          <property name="scaledContents">
+           <bool>false</bool>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>900</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="geometry">
+     <rect>
+      <x>153</x>
+      <y>98</y>
+      <width>106</width>
+      <height>76</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="title">
+     <string>文件</string>
+    </property>
+    <addaction name="OpenImageAction"/>
+    <addaction name="SaveImageAction"/>
+   </widget>
+   <widget class="QMenu" name="menu_2">
+    <property name="geometry">
+     <rect>
+      <x>176</x>
+      <y>98</y>
+      <width>102</width>
+      <height>191</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="title">
+     <string>图像处理</string>
+    </property>
+    <addaction name="ImageGrayAction"/>
+    <addaction name="ImageEnhancementAction"/>
+    <addaction name="EdgeDetictionAction"/>
+    <addaction name="AddNoisyAction"/>
+    <addaction name="ImageFilterAction"/>
+    <addaction name="MorphologyAction"/>
+    <addaction name="InputModelAction"/>
+    <addaction name="AffineAction"/>
+    <addaction name="PerspectiveAction"/>
+   </widget>
+   <widget class="QMenu" name="menu_3">
+    <property name="geometry">
+     <rect>
+      <x>343</x>
+      <y>98</y>
+      <width>126</width>
+      <height>72</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="title">
+     <string>帮助</string>
+    </property>
+    <addaction name="AboutEasyImageAction"/>
+    <addaction name="AboutAuthorAction"/>
+   </widget>
+   <widget class="QMenu" name="menu_5">
+    <property name="title">
+     <string>目标检测</string>
+    </property>
+    <addaction name="ThresholdAction"/>
+    <addaction name="OtsuAction"/>
+    <addaction name="MatchAction"/>
+    <addaction name="GaussinAction"/>
+   </widget>
+   <addaction name="menu"/>
+   <addaction name="menu_2"/>
+   <addaction name="menu_5"/>
+   <addaction name="menu_3"/>
+  </widget>
+  <action name="OpenImageAction">
+   <property name="icon">
+    <iconset>
+     <normaloff>ico/file.ico</normaloff>ico/file.ico</iconset>
+   </property>
+   <property name="text">
+    <string>打开</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="ImageGrayAction">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>图像灰度化</string>
+   </property>
+  </action>
+  <action name="ImageEnhancementAction">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>图像增强</string>
+   </property>
+  </action>
+  <action name="EdgeDetictionAction">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>边缘检测</string>
+   </property>
+  </action>
+  <action name="ImageFilterAction">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>图像滤波</string>
+   </property>
+  </action>
+  <action name="AboutEasyImageAction">
+   <property name="text">
+    <string>关于Easy Image</string>
+   </property>
+  </action>
+  <action name="AboutAuthorAction">
+   <property name="text">
+    <string>关于作者</string>
+   </property>
+  </action>
+  <action name="SaveImageAction">
+   <property name="icon">
+    <iconset>
+     <normaloff>ico/save.ico</normaloff>ico/save.ico</iconset>
+   </property>
+   <property name="text">
+    <string>保存</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="InputModelAction">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>输入模式</string>
+   </property>
+  </action>
+  <action name="AddNoisyAction">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>加入噪声</string>
+   </property>
+  </action>
+  <action name="SignalCamAction">
+   <property name="text">
+    <string>单目标定</string>
+   </property>
+  </action>
+  <action name="action_3">
+   <property name="text">
+    <string>双目标定</string>
+   </property>
+  </action>
+  <action name="MorphologyAction">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>形态学滤波</string>
+   </property>
+  </action>
+  <action name="AffineAction">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>仿射变换</string>
+   </property>
+  </action>
+  <action name="PerspectiveAction">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>透视变换</string>
+   </property>
+  </action>
+  <action name="ThresholdAction">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>固定阈值</string>
+   </property>
+  </action>
+  <action name="OtsuAction">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>自适应阈值</string>
+   </property>
+  </action>
+  <action name="MatchAction">
+   <property name="text">
+    <string>模板匹配</string>
+   </property>
+  </action>
+  <action name="GaussinAction">
+   <property name="text">
+    <string>高斯背景建模</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="ImageProcessUI.qrc"/>
+ </resources>
+ <connections/>
+</ui>

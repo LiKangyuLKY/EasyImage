@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="/ImageProcessUI">
+    <file>ico/volume.png</file>
+    <file>ico/GZH.png</file>
+  </qresource>
+</RCC>
